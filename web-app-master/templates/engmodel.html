@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Diploma-en</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+    <div class="main-info">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/eng">ENGLISH VERSION</a></li>
+                    <li><a href="/rus">RUSSIAN VERSION</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="en-page-text">
+            <h1> Welcome to a rhyme generator </h1>
+            <p> Add your lyrics, so we can create rhyme for them. Lyrics should be consisted of 4 lines. The result will be printed on the right side. Please add your lines through ;</p>
+        </div>
+
+        <div class="row">
+            <div class="result-col">
+                <form action="#" method="post">
+                    <textarea id="textInput" name="lyrics" placeholder="Your lyrics" class="lyrics-input"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="result-col">
+                <h1>Result with rhymes: </h1>
+                <p id="result">{{ res }}</p>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
